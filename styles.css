@@ -43,7 +43,7 @@ body {
   padding: 0 24px;
 }
 
-.section { padding: 96px 0; }
+.section { padding: 64px 0; }
 
 .section-alt {
   background-color: var(--bg-alt);
@@ -562,7 +562,7 @@ body {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 36px;
+  gap: 20px;
 }
 
 .skill-category h3 {
@@ -981,7 +981,7 @@ body {
     text-align: center;
   }
 
-  .section { padding: 64px 0; }
+  .section { padding: 48px 0; }
 
   .skills-grid { grid-template-columns: 1fr 1fr; }
 
