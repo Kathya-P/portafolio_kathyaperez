@@ -687,57 +687,63 @@ body {
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px;
+  gap: 16px;
 }
 
 .cert-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: var(--bg);
+  justify-content: space-between;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   text-decoration: none;
   color: var(--text);
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  padding: 20px;
+  min-height: 110px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Image overlay — hidden by default, slides down on hover */
+.cert-img-wrap {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient overlay so text stays readable on hover */
+.cert-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,10,15,0.82) 40%, rgba(5,10,15,0.3) 100%);
+}
+
+.cert-card:hover .cert-img-wrap {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cert-card:hover {
   border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.18);
+  box-shadow: 0 8px 32px rgba(0,217,255,0.14);
 }
 
-/* Top image area */
-.cert-img-wrap {
-  position: relative;
-  height: 140px;
-  background: var(--bg-alt);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cert-emoji-fallback {
-  font-size: 2.8rem;
-  line-height: 1;
-  user-select: none;
-}
-
-/* Real cert image overlays the emoji when it loads */
-.cert-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
-}
-
-/* Bottom text area */
+/* Text sits above the image overlay */
 .cert-info {
-  padding: 16px 18px;
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -745,26 +751,30 @@ body {
 }
 
 .cert-info h3 {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .cert-info p {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
 }
 
 .cert-link-badge {
-  margin-top: auto;
-  padding-top: 10px;
-  font-size: 0.78rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 12px;
+  font-size: 0.75rem;
   color: var(--accent);
   font-weight: 600;
   font-family: 'Fira Code', monospace;
-  text-shadow: 0 0 8px rgba(0,217,255,0.3);
   letter-spacing: 0.3px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
+
+.cert-card:hover .cert-link-badge { opacity: 1; }
 
 /* ===== CONTACT ===== */
 .contact-grid {
