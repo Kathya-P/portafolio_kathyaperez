@@ -150,6 +150,20 @@ body {
   box-shadow: 0 0 12px rgba(0,217,255,0.15);
 }
 
+.btn-cv {
+  background: transparent;
+  color: var(--accent2);
+  border: 1.5px solid rgba(121,40,202,0.5);
+}
+
+.btn-cv:hover {
+  border-color: var(--accent2);
+  background: rgba(121,40,202,0.12);
+  color: #c084fc;
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(121,40,202,0.25);
+}
+
 /* ===== NAV ===== */
 .nav {
   position: fixed;
