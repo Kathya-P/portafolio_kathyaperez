@@ -2,7 +2,7 @@
 
 Portafolio personal de **Kathya Carolina Pérez Jiménez**, estudiante de Ingeniería en Desarrollo de Software en la Universidad Católica de El Salvador (UNICAES) y Backend Developer.
 
-🔗 **URL:** [portafolio-kathyaperez.vercel.app](https://portafolio-kathyaperez.vercel.app)
+🔗 **URL:** [portafolio-kathyaperez.vercel.app](https://portafoliokathyaperez.vercel.app)
 
 ---
 
