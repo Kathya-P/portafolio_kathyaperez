@@ -222,9 +222,9 @@ document.querySelectorAll('.projects-grid .project-card').forEach((el, i) => {
   el.style.setProperty('--delay', `${i * 80}ms`);
   el.dataset.dir = i % 2 === 0 ? 'left' : 'right';
 });
-document.querySelectorAll('.certs-grid .cert-card').forEach((el, i) => {
+document.querySelectorAll('.certs-timeline .cert-card').forEach((el, i) => {
   el.style.setProperty('--delay', `${(i % 4) * 70}ms`);
-  el.dataset.dir = 'scale';
+  el.dataset.dir = i % 2 === 0 ? 'left' : 'right';
 });
 document.querySelectorAll('.contact-grid .contact-card').forEach((el, i) => {
   el.style.setProperty('--delay', `${i * 100}ms`);
