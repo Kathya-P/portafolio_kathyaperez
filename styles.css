@@ -683,108 +683,82 @@ body {
   border-radius: 100px;
 }
 
-/* ===== CERTS TIMELINE ===== */
-.certs-timeline {
-  position: relative;
+/* ===== CERTS ===== */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  padding-bottom: 8px;
-}
-
-/* Center vertical line */
-.certs-timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 10px;
-  bottom: 10px;
-  width: 2px;
-  transform: translateX(-50%);
-  background: linear-gradient(to bottom, var(--accent) 0%, var(--accent2) 80%, transparent 100%);
-  opacity: 0.4;
-}
-
-/* Each item spans full width; padding pushes card to one side */
-.timeline-item {
-  position: relative;
-  width: 100%;
-  display: flex;
-  margin-bottom: 22px;
-}
-
-/* Odd: card on the LEFT half */
-.timeline-item:nth-child(odd) {
-  justify-content: flex-start;
-  padding-right: calc(50% + 38px);
-}
-
-/* Even: card on the RIGHT half */
-.timeline-item:nth-child(even) {
-  justify-content: flex-end;
-  padding-left: calc(50% + 38px);
-}
-
-/* Dot — always centered on the timeline line */
-.timeline-dot {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--bg-card);
-  border: 2px solid var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  z-index: 2;
-  box-shadow: 0 0 14px rgba(0,217,255,0.22);
-  flex-shrink: 0;
-}
-
-/* Card */
-.cert-card {
-  flex: 1;
-  background: var(--bg-card);
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 16px 20px;
+  overflow: hidden;
   text-decoration: none;
   color: var(--text);
-  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .cert-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 8px 32px rgba(0,217,255,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.18);
 }
 
-.timeline-item:nth-child(odd) .cert-card:hover  { transform: translateX(-4px); }
-.timeline-item:nth-child(even) .cert-card:hover { transform: translateX(4px); }
+/* Top image area */
+.cert-img-wrap {
+  position: relative;
+  height: 140px;
+  background: var(--bg-alt);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.cert-emoji-fallback {
+  font-size: 2.8rem;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Real cert image overlays the emoji when it loads */
+.cert-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Bottom text area */
 .cert-info {
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 1;
 }
 
 .cert-info h3 {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.35;
 }
 
 .cert-info p {
-  font-size: 0.77rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
 }
 
 .cert-link-badge {
-  margin-top: 8px;
-  font-size: 0.77rem;
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 0.78rem;
   color: var(--accent);
   font-weight: 600;
   font-family: 'Fira Code', monospace;
@@ -980,24 +954,8 @@ body {
   .skills-grid { grid-template-columns: 1fr 1fr; }
 
   .projects-grid,
+  .certs-grid,
   .contact-grid { grid-template-columns: 1fr; }
-
-  /* Timeline collapses to single column on mobile */
-  .certs-timeline::before { left: 22px; transform: none; }
-
-  .timeline-item {
-    padding-right: 0 !important;
-    padding-left: 56px !important;
-    justify-content: flex-end !important;
-  }
-
-  .timeline-dot {
-    left: 22px;
-    transform: translate(-50%, -50%);
-  }
-
-  .timeline-item:nth-child(odd) .cert-card:hover,
-  .timeline-item:nth-child(even) .cert-card:hover { transform: none; }
 
   /* Stack hero: photo on top, text below */
   .hero-wrapper {
