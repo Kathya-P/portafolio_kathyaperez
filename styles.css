@@ -597,6 +597,18 @@ body {
   z-index: 0;
 }
 
+.tag--soft {
+  background: rgba(121,40,202,0.1);
+  color: var(--accent2);
+  border-color: rgba(121,40,202,0.35);
+}
+
+.tag--soft::before {
+  background: var(--accent2);
+}
+
+.tag--soft:hover { color: #fff; border-color: var(--accent2); }
+
 .tag::before {
   content: '';
   position: absolute;
@@ -610,8 +622,6 @@ body {
 
 .tag:hover::before  { transform: translateX(0); }
 .tag:hover { color: #050a0f; border-color: var(--accent); background: transparent; }
-
-/* ===== PROJECTS ===== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -775,6 +785,18 @@ body {
 }
 
 .cert-card:hover .cert-link-badge { opacity: 1; }
+
+.soft-skill-tags {
+  margin-bottom: 8px;
+}
+
+.soft-certs-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 0.5px;
+  margin: 36px 0 16px;
+}
 
 /* ===== CONTACT ===== */
 .contact-grid {
