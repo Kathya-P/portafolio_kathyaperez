@@ -112,16 +112,8 @@ button:hover {
 }
 
 .game-topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
+  display: block;
   margin-bottom: 22px;
-}
-
-.back-link {
-  color: #93c5fd;
-  text-decoration: none;
 }
 
 .pantalla-juego {
@@ -200,7 +192,4 @@ button:hover {
     aspect-ratio: 1 / 1;
   }
 
-  .game-topbar {
-    flex-direction: column;
-  }
 }
