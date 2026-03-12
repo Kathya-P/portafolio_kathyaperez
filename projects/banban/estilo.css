@@ -1,0 +1,35 @@
+body {
+    background-color: #fddfdf;
+    padding-top: 50px; 
+}
+.hero {
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+.img {
+    height: 500px;
+}
+.hero h1 {
+    font-size: 3rem;
+}
+.titulo {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #3f3535;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.btn {
+    color: #000000;
+    background-color: #d38080;
+}
+footer{
+    color: rgb(63, 21, 21);
+}
+
