@@ -1,4 +1,13 @@
 {
-	"folders": [],
+	"folders": [
+		{
+			"name": "portfolio",
+			"path": "."
+		},
+		{
+			"name": "eventspheree",
+			"path": "../eventspheree"
+		}
+	],
 	"settings": {}
 }
