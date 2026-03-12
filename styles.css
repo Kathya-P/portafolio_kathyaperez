@@ -688,6 +688,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
+  padding-top: 195px;   /* room for first-row image popups */
+  margin-top: -195px;   /* cancel visual gap */
 }
 
 .cert-card {
@@ -698,22 +700,38 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
+  overflow: visible;           /* allows image to pop out above */
   text-decoration: none;
   color: var(--text);
   padding: 20px;
   min-height: 110px;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  z-index: 0;
 }
 
-/* Image overlay — hidden by default, slides down on hover */
+.cert-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(0,217,255,0.12);
+  transform: translateY(-2px);
+  z-index: 10;
+}
+
+/* Floating image preview — pops above the card on hover */
 .cert-img-wrap {
   position: absolute;
-  inset: 0;
+  bottom: calc(100% + 10px);
+  left: -1px;
+  right: -1px;
+  height: 175px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--accent);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6);
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translateY(10px) scale(0.97);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+  z-index: 20;
 }
 
 .cert-img {
@@ -722,28 +740,12 @@ body {
   object-fit: cover;
 }
 
-/* Gradient overlay so text stays readable on hover */
-.cert-img-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(5,10,15,0.82) 40%, rgba(5,10,15,0.3) 100%);
-}
-
 .cert-card:hover .cert-img-wrap {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
-.cert-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 32px rgba(0,217,255,0.14);
-}
-
-/* Text sits above the image overlay */
 .cert-info {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -762,8 +764,6 @@ body {
 }
 
 .cert-link-badge {
-  position: relative;
-  z-index: 1;
   margin-top: 12px;
   font-size: 0.75rem;
   color: var(--accent);
