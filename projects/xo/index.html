@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XO Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="page">
+    <section id="inicio" class="panel panel-start">
+      <p class="eyebrow">Mini project</p>
+      <h1>XO Game</h1>
+      <p class="intro">Tres en raya con una estética de horror ligera y lógica hecha en JavaScript puro.</p>
+
+      <div class="form-grid">
+        <label>
+          <span>Jugador 1</span>
+          <input type="text" id="jugador1" placeholder="Primer nombre">
+        </label>
+
+        <label>
+          <span>Ficha</span>
+          <select id="fichaJugador1">
+            <option value="X">☠️</option>
+            <option value="O">💀</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Color jugador 1</span>
+          <select id="colorJugador1">
+            <option value="negro">Negro</option>
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Jugador 2</span>
+          <input type="text" id="jugador2" placeholder="Segundo nombre">
+        </label>
+
+        <label>
+          <span>Color jugador 2</span>
+          <select id="colorJugador2">
+            <option value="rojo">Rojo</option>
+            <option value="negro">Negro</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+          </select>
+        </label>
+      </div>
+
+      <button class="primary-btn" onclick="empezarJuego()">Empezar partida</button>
+    </section>
+
+    <section id="juego" class="panel panel-game" style="display:none;">
+      <div class="game-topbar">
+        <div>
+          <p class="eyebrow">Turnos y puntaje</p>
+          <h1>Cruce de Destinos</h1>
+        </div>
+        <a class="back-link" href="../../index.html#proyectos">Volver al portfolio</a>
+      </div>
+
+      <div class="pantalla-juego">
+        <aside class="lado">
+          <p class="label">Jugador X</p>
+          <p><span id="nombreX">☠️</span></p>
+          <p>Victorias: <span id="puntosX">0</span></p>
+        </aside>
+
+        <div class="centro">
+          <div class="tablero" id="tablero"></div>
+          <p id="mensaje">Turno de: ☠️</p>
+          <div class="botones">
+            <button onclick="reiniciarJuego()">Reiniciar</button>
+            <button onclick="rendirse()">Salir</button>
+          </div>
+        </div>
+
+        <aside class="lado">
+          <p class="label">Jugador O</p>
+          <p><span id="nombreO">💀 O</span></p>
+          <p>Victorias: <span id="puntosO">0</span></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
