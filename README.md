@@ -1,37 +1,40 @@
-# Kathya Pérez — Portfolio
+# Kathya Pérez — Portafolio
 
-Portafolio personal desplegado en GitHub Pages.
-🔗 **URL:** `https://kathya-perez117.github.io`
+Portafolio personal de **Kathya Carolina Pérez Jiménez**, estudiante de Ingeniería en Desarrollo de Software en la Universidad Católica de El Salvador (UNICAES) y Backend Developer.
 
-## Cómo desplegarlo en GitHub Pages
+🔗 **URL:** [portafolio-kathyaperez.vercel.app](https://portafolio-kathyaperez.vercel.app)
 
-### Paso 1 — Crear el repositorio en GitHub
-1. Ve a [github.com/new](https://github.com/new)
-2. Nombre del repositorio: **`kathya-perez117.github.io`** (exactamente así, con tu usuario)
-3. Márcalo como **Public**
-4. NO marques "Add a README file"
-5. Clic en **Create repository**
+---
 
-### Paso 2 — Subir el código
-Abre una terminal en la carpeta `portfolio` y ejecuta:
+## Sobre mí
 
-```bash
-git init
-git add .
-git commit -m "Initial portfolio"
-git branch -M main
-git remote add origin https://github.com/kathya-perez117/kathya-perez117.github.io.git
-git push -u origin main
-```
+Soy estudiante de Ingeniería en Desarrollo de Software con enfoque en el área backend. Me interesa construir APIs limpias, sistemas seguros y soluciones que aporten valor real. Siempre aprendiendo, actualmente profundizando en arquitectura de software, seguridad web y buenas prácticas de desarrollo.
 
-### Paso 3 — Activar GitHub Pages
-1. En el repositorio, ve a **Settings → Pages**
-2. En "Source" selecciona **Deploy from a branch**
-3. Branch: **main** / Folder: **/ (root)**
-4. Clic en **Save**
+- 📍 El Salvador
+- 🎓 UNICAES · Ing. en Desarrollo de Software (2024 – presente)
+- 🌐 Español (nativo) · Inglés B2
+- 💼 Disponible para prácticas profesionales y trabajo remoto
 
-En 1-2 minutos tu portafolio estará en:
-**https://kathya-perez117.github.io**
+---
+
+## Habilidades
+
+| Área | Tecnologías |
+|---|---|
+| **Lenguajes** | C#, PHP, JavaScript, HTML5, CSS3, SQL, Python |
+| **Frameworks & Librerías** | Spring Boot, Vue.js, React, Bootstrap 5, .NET |
+| **Bases de datos** | MySQL, SQL Server |
+| **Herramientas** | Git, VS Code, Visual Studio, Linux / Bash, Apache, Nginx |
+| **Conceptos** | REST APIs, MVC, POO, Seguridad web |
+
+---
+
+## Proyectos destacados
+
+- **Renta SV** — Plataforma web para gestión y búsqueda de propiedades en alquiler. PHP · MySQL · MVC
+- **Ban Ban** — Sitio web para panadería local con catálogo visual. HTML5 · Bootstrap 5 · JavaScript
+- **Restaurante Digital** — Menú digital y panel de administración de pedidos. PHP · MySQL
+- **XO Game** — Juego de tres en raya con lógica en JavaScript puro. HTML5 · CSS3 · JavaScript
 
 ---
 
@@ -40,12 +43,15 @@ En 1-2 minutos tu portafolio estará en:
 ```
 portfolio/
 ├── index.html   ← estructura y contenido
-├── styles.css   ← todo el diseño visual
-└── script.js    ← interactividad (nav, scroll reveal)
+├── styles.css   ← diseño visual
+├── script.js    ← interactividad (nav, scroll reveal, i18n)
+├── img/         ← imágenes de certificados
+└── certs/       ← PDFs de certificados
 ```
 
-## Personalizar
+## Tecnologías del portafolio
 
-- **Cambiar info personal:** edita `index.html`
-- **Agregar proyecto:** copia un `<article class="project-card">` y edita el contenido
-- **Cambiar colores:** edita las variables CSS en `:root` dentro de `styles.css`
+- HTML5 semántico
+- CSS3 puro (variables, grid, animaciones)
+- JavaScript vanilla (sin frameworks)
+- Desplegado en **Vercel**
