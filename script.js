@@ -8,9 +8,12 @@ const translations = {
     'nav-certs':    'Certificados',
     'nav-contact':  'Contacto',
     'greeting':     '// hola, soy',
-    'hero-desc':    'Estudiante de Ingeniería en Desarrollo de Software en la Universidad Católica de El Salvador. Apasionada por construir APIs robustas, sistemas seguros y soluciones backend limpias y escalables.',
-    'hero-btn1':    'Ver proyectos',
-    'hero-btn2':    'Contacto',
+    'hero-desc':    'Desarrolladora junior enfocada en backend con Java/Spring Boot y C#/.NET. Construyo APIs seguras, sistemas de gestión y soluciones full stack con enfoque en calidad, escalabilidad y resultados.',
+    'hero-pill-role': 'Objetivo: Backend Developer Junior',
+    'hero-pill-stack': 'Stack: Java · Spring Boot · C# · .NET',
+    'hero-pill-availability': 'Disponibilidad: Prácticas / remoto',
+    'hero-btn1':    'Agendar entrevista',
+    'hero-btn2':    'Ver proyectos clave',
     'hero-btn-cv':  'Descargar CV',
     'about-title':  'Sobre mí',
     'about-p1':     'Soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en la Universidad Católica de El Salvador, con enfoque en el área backend. Me interesa construir APIs limpias, sistemas seguros y soluciones que den valor real.',
@@ -84,9 +87,12 @@ const translations = {
     'nav-certs':    'Certificates',
     'nav-contact':  'Contact',
     'greeting':     '// hi, I\'m',
-    'hero-desc':    'Software Development Engineering student at Universidad Católica de El Salvador. Passionate about building robust APIs, secure systems, and clean backend solutions.',
-    'hero-btn1':    'View projects',
-    'hero-btn2':    'Contact',
+    'hero-desc':    'Junior developer focused on backend with Java/Spring Boot and C#/.NET. I build secure APIs, management systems, and full-stack solutions with an emphasis on quality, scalability, and outcomes.',
+    'hero-pill-role': 'Target role: Junior Backend Developer',
+    'hero-pill-stack': 'Stack: Java · Spring Boot · C# · .NET',
+    'hero-pill-availability': 'Availability: Internship / remote',
+    'hero-btn1':    'Schedule interview',
+    'hero-btn2':    'View key projects',
     'hero-btn-cv':  'Download CV',
     'about-title':  'About me',
     'about-p1':     'I\'m a <strong>Software Development Engineering</strong> student at Universidad Católica de El Salvador, focused on backend. I care about building clean APIs, secure systems, and solutions that deliver real value.',
@@ -224,7 +230,7 @@ document.addEventListener('mousemove', e => {
 });
 
 // ===== TYPING ANIMATION =====
-const roles = ['Backend Developer', 'API Designer', 'Software Engineer', 'Full-Stack Dev', 'IT Security Learner'];
+const roles = ['Junior Backend Developer', 'Java / Spring Boot', 'C# / .NET Developer', 'API Builder', 'Full-Stack Junior'];
 const roleEl = document.querySelector('.hero-role');
 let roleIdx = 0, charIdx = 0, deleting = false;
 

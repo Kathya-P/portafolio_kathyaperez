@@ -495,8 +495,28 @@ body {
   color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.8;
-  margin-bottom: 36px;
+  margin-bottom: 22px;
   max-width: 560px;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  max-width: 620px;
+}
+
+.hero-pill {
+  border: 1px solid rgba(0, 217, 255, 0.22);
+  background: rgba(0, 217, 255, 0.06);
+  color: #bdefff;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.74rem;
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .hero-actions {
@@ -1181,6 +1201,15 @@ body {
   .photo-bracket--right { right: 0; }
 
   .hero-social { justify-content: center; }
+
+  .hero-highlights {
+    justify-content: center;
+  }
+
+  .hero-pill {
+    white-space: normal;
+    text-align: center;
+  }
 
   .hero-actions { flex-direction: column; }
 
