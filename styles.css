@@ -777,64 +777,66 @@ body {
 }
 
 /* ===== TIMELINE ===== */
-.timeline {
+.timeline-roadmap {
   position: relative;
   display: grid;
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.timeline::before {
+.timeline-roadmap::before {
   content: '';
   position: absolute;
-  left: 68px;
-  top: 6px;
-  bottom: 6px;
-  width: 2px;
-  background: linear-gradient(180deg, rgba(0,217,255,0.35), rgba(121,40,202,0.35));
+  top: 22px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0,217,255,0.35), rgba(121,40,202,0.35));
 }
 
-.timeline-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-.timeline-year {
-  color: var(--accent);
-  font-family: 'Fira Code', monospace;
-  font-size: 0.78rem;
-  line-height: 1;
-  margin-top: 13px;
-}
-
-.timeline-content {
-  background: var(--bg-card);
+.timeline-step {
+  background: linear-gradient(160deg, rgba(10,18,32,0.96), rgba(8,15,23,0.96));
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
   position: relative;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
-.timeline-content::before {
-  content: '';
-  position: absolute;
-  left: -28px;
-  top: 18px;
+.timeline-step:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.timeline-step-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.timeline-step-year {
+  color: var(--accent);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.timeline-step-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(0,217,255,0.12), 0 0 14px rgba(0,217,255,0.35);
+  box-shadow: 0 0 0 4px rgba(0,217,255,0.12), 0 0 12px rgba(0,217,255,0.3);
 }
 
-.timeline-content h3 {
+.timeline-step h3 {
   margin: 0 0 8px;
   font-size: 0.98rem;
 }
 
-.timeline-content p {
+.timeline-step p {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -1186,17 +1188,15 @@ body {
 
   .about-info-item { flex-direction: column; gap: 2px; }
 
-  .timeline::before {
-    left: 56px;
-  }
-
-  .timeline-item {
-    grid-template-columns: 44px 1fr;
+  .timeline-roadmap {
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  .timeline-content::before {
-    left: -22px;
+  .timeline-roadmap::before {
+    left: 14px;
+    right: 14px;
+    top: 18px;
   }
 }
 
