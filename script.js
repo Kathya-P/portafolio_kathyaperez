@@ -4,6 +4,7 @@ const translations = {
     'nav-about':    'Sobre mí',
     'nav-skills':   'Habilidades',
     'nav-projects': 'Proyectos',
+    'nav-timeline': 'Trayectoria',
     'nav-certs':    'Certificados',
     'nav-contact':  'Contacto',
     'greeting':     '// hola, soy',
@@ -29,6 +30,13 @@ const translations = {
     'skill-cat-db':   'Bases de Datos',
     'skill-cat-tools': 'Herramientas &amp; Otros',
     'projects-title':   'Proyectos',
+    'projects-subtitle': 'Filtra por tecnología para ver rápido lo que más te interesa.',
+    'filter-all': 'Todos',
+    'filter-java': 'Java',
+    'filter-csharp': 'C#',
+    'filter-frontend': 'Frontend',
+    'filter-fullstack': 'Full Stack',
+    'projects-empty': 'No hay proyectos para ese filtro por ahora.',
     'proj-renta-title': 'Renta SV — Plataforma de Alquileres',
     'proj-renta-desc':  'Sistema web para gestión y búsqueda de propiedades en alquiler en El Salvador. Incluye panel de administrador con CRUD completo, autenticación de usuarios y filtros avanzados de búsqueda.',
     'proj-banban-title': 'Ban Ban — Panadería Digital',
@@ -41,6 +49,16 @@ const translations = {
     'proj-xo-desc':  'Juego de tres en raya con lógica implementada en JavaScript puro. Detección automática de ganador, empates y reinicio de partida. UI limpia y responsive.',
     'proj-eventsphere-title': 'EventSphere — Plataforma de Eventos',
     'proj-eventsphere-desc':  'Plataforma web full-stack para gestión de eventos con compra de boletos, generación de códigos QR, chat por evento, sistema de reseñas y panel de administración. Desplegada en Railway con PostgreSQL.',
+    'timeline-title': 'Trayectoria',
+    'timeline-subtitle': 'Evolución de aprendizaje, proyectos y crecimiento técnico.',
+    'timeline-1-title': 'Inicio de Ingeniería en Software',
+    'timeline-1-desc': 'Comienzo formal en UNICAES, consolidando fundamentos de programación, arquitectura y bases de datos.',
+    'timeline-2-title': 'Primeras certificaciones técnicas',
+    'timeline-2-desc': 'Back-End, Front-End y soporte IT; fortaleciendo el perfil para proyectos reales y trabajo en equipo.',
+    'timeline-3-title': 'Sistema de Reclutamiento en C#',
+    'timeline-3-desc': 'Desarrollo de solución de escritorio con WinForms y SQL Server para evaluación y comparación de candidatos.',
+    'timeline-4-title': 'EventSphere y portafolio técnico',
+    'timeline-4-desc': 'Implementación de plataforma full stack con Spring Boot, despliegue en Railway y mejora continua del portafolio.',
     'soft-title':         'Habilidades Blandas',
     'soft-certs-label':  '// certificados relacionados',
     'soft-communication': 'Comunicación efectiva',
@@ -62,6 +80,7 @@ const translations = {
     'nav-about':    'About',
     'nav-skills':   'Skills',
     'nav-projects': 'Projects',
+    'nav-timeline': 'Timeline',
     'nav-certs':    'Certificates',
     'nav-contact':  'Contact',
     'greeting':     '// hi, I\'m',
@@ -87,6 +106,13 @@ const translations = {
     'skill-cat-db':   'Databases',
     'skill-cat-tools': 'Tools &amp; Other',
     'projects-title':   'Projects',
+    'projects-subtitle': 'Filter by technology to quickly see what interests you most.',
+    'filter-all': 'All',
+    'filter-java': 'Java',
+    'filter-csharp': 'C#',
+    'filter-frontend': 'Frontend',
+    'filter-fullstack': 'Full Stack',
+    'projects-empty': 'No projects match this filter yet.',
     'proj-renta-title': 'Renta SV — Rental Platform',
     'proj-renta-desc':  'Web system for property rental management and search in El Salvador. Features admin panel with full CRUD, user authentication and advanced search filters.',
     'proj-banban-title': 'Ban Ban — Digital Bakery',
@@ -99,6 +125,16 @@ const translations = {
     'proj-xo-desc':  'Tic tac toe game with pure JavaScript logic. Auto-detects winner, handles draws and game restart. Clean responsive UI.',
     'proj-eventsphere-title': 'EventSphere — Events Platform',
     'proj-eventsphere-desc':  'Full-stack web platform for event management with ticket purchasing, QR code generation, in-event chat, review system and admin panel. Deployed on Railway with PostgreSQL.',
+    'timeline-title': 'Timeline',
+    'timeline-subtitle': 'Learning journey, projects and technical growth over time.',
+    'timeline-1-title': 'Started Software Engineering degree',
+    'timeline-1-desc': 'Formal start at UNICAES, strengthening fundamentals in programming, architecture and databases.',
+    'timeline-2-title': 'First technical certifications',
+    'timeline-2-desc': 'Back-End, Front-End and IT support certifications, building a stronger profile for real projects and teamwork.',
+    'timeline-3-title': 'C# Recruitment System',
+    'timeline-3-desc': 'Built a desktop solution with WinForms and SQL Server for candidate evaluation and comparison.',
+    'timeline-4-title': 'EventSphere and technical portfolio',
+    'timeline-4-desc': 'Delivered a full-stack platform with Spring Boot, Railway deployment, and continuous portfolio improvement.',
     'soft-title':         'Soft Skills',
     'soft-certs-label':  '// related certificates',
     'soft-communication': 'Effective communication',
@@ -260,4 +296,34 @@ document.querySelectorAll('.contact-grid .contact-card').forEach((el, i) => {
   el.style.setProperty('--delay', `${i * 100}ms`);
   el.dataset.dir = 'left';
 });
+
+// ===== PROJECT FILTERS =====
+const filterButtons = document.querySelectorAll('.filter-chip');
+const projectCards = [...document.querySelectorAll('.projects-grid .project-card')];
+const projectsEmpty = document.getElementById('projectsEmpty');
+
+function applyProjectFilter(filter) {
+  let visibleCount = 0;
+
+  projectCards.forEach(card => {
+    const tech = (card.dataset.tech || '').toLowerCase();
+    const show = filter === 'all' || tech.includes(filter);
+    card.classList.toggle('is-hidden', !show);
+    if (show) visibleCount++;
+  });
+
+  if (projectsEmpty) {
+    projectsEmpty.classList.toggle('show', visibleCount === 0);
+  }
+}
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(btn => btn.classList.remove('is-active'));
+    button.classList.add('is-active');
+    applyProjectFilter(button.dataset.filter);
+  });
+});
+
+applyProjectFilter('all');
 

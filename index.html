@@ -26,6 +26,7 @@
         <li><a href="#sobre-mi"     data-i18n="nav-about">Sobre mí</a></li>
         <li><a href="#habilidades"  data-i18n="nav-skills">Habilidades</a></li>
         <li><a href="#proyectos"    data-i18n="nav-projects">Proyectos</a></li>
+        <li><a href="#trayectoria"  data-i18n="nav-timeline">Trayectoria</a></li>
         <li><a href="#certificados" data-i18n="nav-certs">Certificados</a></li>
         <li><a href="#contacto" class="nav-cta" data-i18n="nav-contact">Contacto</a></li>
       </ul>
@@ -218,9 +219,19 @@
   <section class="section" id="proyectos">
     <div class="container">
       <h2 class="section-title" data-i18n="projects-title">Proyectos</h2>
+      <p class="section-subtitle" data-i18n="projects-subtitle">Filtra por tecnología para ver rápido lo que más te interesa.</p>
+
+      <div class="project-filters reveal" role="group" aria-label="Filtrar proyectos por tecnología">
+        <button class="filter-chip is-active" data-filter="all" data-i18n="filter-all">Todos</button>
+        <button class="filter-chip" data-filter="java" data-i18n="filter-java">Java</button>
+        <button class="filter-chip" data-filter="csharp" data-i18n="filter-csharp">C#</button>
+        <button class="filter-chip" data-filter="frontend" data-i18n="filter-frontend">Frontend</button>
+        <button class="filter-chip" data-filter="fullstack" data-i18n="filter-fullstack">Full Stack</button>
+      </div>
+
       <div class="projects-grid">
 
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-tech="java backend fullstack">
           <div class="project-header">
             <div>
               <p class="project-kicker">Spring Boot · PostgreSQL</p>
@@ -242,7 +253,7 @@
         </article>
 
 
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-tech="frontend html css javascript">
           <div class="project-header">
             <div>
               <p class="project-kicker">Bootstrap 5 · Responsive</p>
@@ -264,7 +275,7 @@
         </article>
 
 
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-tech="csharp backend desktop dotnet sqlserver">
           <div class="project-header">
             <div>
               <p class="project-kicker">C# · WinForms · SQL Server</p>
@@ -282,7 +293,7 @@
           </div>
         </article>
 
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-tech="frontend javascript game html css">
           <div class="project-header">
             <div>
               <p class="project-kicker">Juego web · JavaScript puro</p>
@@ -303,6 +314,49 @@
           </div>
         </article>
 
+      </div>
+      <p class="projects-empty" id="projectsEmpty" data-i18n="projects-empty">No hay proyectos para ese filtro por ahora.</p>
+    </div>
+  </section>
+
+  <!-- ===== TRAYECTORIA ===== -->
+  <section class="section section-alt" id="trayectoria">
+    <div class="container">
+      <h2 class="section-title" data-i18n="timeline-title">Trayectoria</h2>
+      <p class="section-subtitle" data-i18n="timeline-subtitle">Evolución de aprendizaje, proyectos y crecimiento técnico.</p>
+
+      <div class="timeline">
+        <article class="timeline-item reveal" data-dir="left">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-content">
+            <h3 data-i18n="timeline-1-title">Inicio de Ingeniería en Software</h3>
+            <p data-i18n="timeline-1-desc">Comienzo formal en UNICAES, consolidando fundamentos de programación, arquitectura y bases de datos.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal" data-dir="right">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-content">
+            <h3 data-i18n="timeline-2-title">Primeras certificaciones técnicas</h3>
+            <p data-i18n="timeline-2-desc">Back-End, Front-End y soporte IT; fortaleciendo el perfil para proyectos reales y trabajo en equipo.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal" data-dir="left">
+          <span class="timeline-year">2025</span>
+          <div class="timeline-content">
+            <h3 data-i18n="timeline-3-title">Sistema de Reclutamiento en C#</h3>
+            <p data-i18n="timeline-3-desc">Desarrollo de solución de escritorio con WinForms y SQL Server para evaluación y comparación de candidatos.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal" data-dir="right">
+          <span class="timeline-year">2026</span>
+          <div class="timeline-content">
+            <h3 data-i18n="timeline-4-title">EventSphere y portafolio técnico</h3>
+            <p data-i18n="timeline-4-desc">Implementación de plataforma full stack con Spring Boot, despliegue en Railway y mejora continua del portafolio.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
