@@ -8,16 +8,16 @@ const translations = {
     'nav-certs':    'Certificados',
     'nav-contact':  'Contacto',
     'greeting':     '// hola, soy',
-    'hero-desc':    'Desarrolladora junior enfocada en backend con Java/Spring Boot y C#/.NET. Construyo APIs seguras, sistemas de gestión y soluciones full stack con enfoque en calidad, escalabilidad y resultados.',
-    'hero-pill-role': 'Objetivo: Backend Developer Junior',
-    'hero-pill-stack': 'Stack: Java · Spring Boot · C# · .NET',
+    'hero-desc':    'Desarrolladora junior full stack (20 años) con especialidad en backend usando Java/Spring Boot y C#/.NET. Construyo APIs seguras, sistemas de gestión escalables y soluciones web completas con enfoque en calidad y resultados.',
+    'hero-pill-role': 'Objetivo: Full Stack Developer Junior',
+    'hero-pill-stack': 'Stack: Java · C# · JavaScript · Vue/React',
     'hero-pill-availability': 'Disponibilidad: Prácticas / remoto',
     'hero-btn1':    'Contacto',
     'hero-btn2':    'Ver proyectos clave',
     'hero-btn-cv':  'Descargar CV',
     'about-title':  'Sobre mí',
-    'about-p1':     'Soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en la Universidad Católica de El Salvador, con enfoque en el área backend. Me interesa construir APIs limpias, sistemas seguros y soluciones que den valor real.',
-    'about-p2':     'Tengo experiencia práctica con <strong>PHP, C# (.NET) y Java (Spring Boot)</strong> para el desarrollo backend, y con <strong>HTML, CSS, JavaScript, Vue.js y Bootstrap</strong> en el frontend — lo que me permite entender el proyecto de extremo a extremo.',
+    'about-p1':     'Tengo 20 años y soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en la Universidad Católica de El Salvador. Me interesa construir soluciones completas: APIs limpias, sistemas seguros y experiencias web atractivas con enfoque en calidad y escalabilidad.',
+    'about-p2':     'Tengo experiencia práctica con <strong>Java (Spring Boot), C# (.NET) y PHP</strong> en backend, y con <strong>HTML, CSS, JavaScript, Vue.js, React y Bootstrap</strong> en frontend. Esto me permite comprender proyectos completos de extremo a extremo.',
     'about-p3':     'Siempre estoy aprendiendo algo nuevo. Actualmente profundizando en arquitectura de software, seguridad web y buenas prácticas de desarrollo.',
     'label-location': '📍 Ubicación',
     'label-uni':      '🎓 Universidad',
@@ -89,16 +89,16 @@ const translations = {
     'nav-certs':    'Certificates',
     'nav-contact':  'Contact',
     'greeting':     '// hi, I\'m',
-    'hero-desc':    'Junior developer focused on backend with Java/Spring Boot and C#/.NET. I build secure APIs, management systems, and full-stack solutions with an emphasis on quality, scalability, and outcomes.',
-    'hero-pill-role': 'Target role: Junior Backend Developer',
-    'hero-pill-stack': 'Stack: Java · Spring Boot · C# · .NET',
+    'hero-desc':    'Junior full-stack developer (20 years old) with a specialty in backend using Java/Spring Boot and C#/.NET. I build secure APIs, scalable management systems, and complete web solutions with a focus on quality and results.',
+    'hero-pill-role': 'Target role: Junior Full Stack Developer',
+    'hero-pill-stack': 'Stack: Java · C# · JavaScript · Vue/React',
     'hero-pill-availability': 'Availability: Internship / remote',
     'hero-btn1':    'Contact',
     'hero-btn2':    'View key projects',
     'hero-btn-cv':  'Download CV',
     'about-title':  'About me',
-    'about-p1':     'I\'m a <strong>Software Development Engineering</strong> student at Universidad Católica de El Salvador, focused on backend. I care about building clean APIs, secure systems, and solutions that deliver real value.',
-    'about-p2':     'I have hands-on experience with <strong>PHP, C# (.NET) and Java (Spring Boot)</strong> for backend, and with <strong>HTML, CSS, JavaScript, Vue.js and Bootstrap</strong> on the frontend — which lets me understand the full project end to end.',
+    'about-p1':     'I\'m 20 years old and a <strong>Software Development Engineering</strong> student at Universidad Católica de El Salvador. I'm passionate about building complete solutions: clean APIs, secure systems, and attractive web experiences with a focus on quality and scalability.',
+    'about-p2':     'I have hands-on experience with <strong>Java (Spring Boot), C# (.NET) and PHP</strong> for backend, and with <strong>HTML, CSS, JavaScript, Vue.js, React and Bootstrap</strong> on the frontend. This allows me to understand complete projects end to end.',
     'about-p3':     'I\'m always learning something new. Currently deepening my knowledge in software architecture, web security and development best practices.',
     'label-location': '📍 Location',
     'label-uni':      '🎓 University',
@@ -234,7 +234,7 @@ document.addEventListener('mousemove', e => {
 });
 
 // ===== TYPING ANIMATION =====
-const roles = ['Junior Backend Developer', 'Java / Spring Boot', 'C# / .NET Developer', 'API Builder', 'Full-Stack Junior'];
+const roles = ['Full Stack Developer', 'Java / Spring Boot', 'C# / React Developer', 'API Builder', 'Full-Stack Developer'];
 const roleEl = document.querySelector('.hero-role');
 let roleIdx = 0, charIdx = 0, deleting = false;
 
