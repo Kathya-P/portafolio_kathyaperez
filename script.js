@@ -97,7 +97,7 @@ const translations = {
     'hero-btn2':    'View key projects',
     'hero-btn-cv':  'Download CV',
     'about-title':  'About me',
-    'about-p1':     'I\'m 20 years old and a <strong>Software Development Engineering</strong> student at Universidad Católica de El Salvador. I'm passionate about building complete solutions: clean APIs, secure systems, and attractive web experiences with a focus on quality and scalability.',
+    'about-p1':     'I\'m 20 years old and a <strong>Software Development Engineering</strong> student at Universidad Católica de El Salvador. I\'m passionate about building complete solutions: clean APIs, secure systems, and attractive web experiences with a focus on quality and scalability.',
     'about-p2':     'I have hands-on experience with <strong>Java (Spring Boot), C# (.NET) and PHP</strong> for backend, and with <strong>HTML, CSS, JavaScript, Vue.js, React and Bootstrap</strong> on the frontend. This allows me to understand complete projects end to end.',
     'about-p3':     'I\'m always learning something new. Currently deepening my knowledge in software architecture, web security and development best practices.',
     'label-location': '📍 Location',
