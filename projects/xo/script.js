@@ -12,47 +12,52 @@ let colorX = "#11131a";
 let colorO = "#1f1724";
 
 function empezarJuego() {
-  const nombre1 = document.getElementById("jugador1").value.trim() || "Jugador 1";
-  const ficha = document.getElementById("fichaJugador1").value;
-  const color1 = document.getElementById("colorJugador1").value;
-  const nombre2 = document.getElementById("jugador2").value.trim() || "Jugador 2";
-  const color2 = document.getElementById("colorJugador2").value;
+  try {
+    const nombre1 = document.getElementById("jugador1").value.trim() || "Jugador 1";
+    const ficha = document.getElementById("fichaJugador1").value;
+    const color1 = document.getElementById("colorJugador1").value;
+    const nombre2 = document.getElementById("jugador2").value.trim() || "Jugador 2";
+    const color2 = document.getElementById("colorJugador2").value;
 
-  const colores = {
-    negro: "#11131a",
-    rojo: "#3b0d14",
-    verde: "#0f2c24",
-    azul: "#10263f"
-  };
+    const colores = {
+      negro: "#11131a",
+      rojo: "#3b0d14",
+      verde: "#0f2c24",
+      azul: "#10263f"
+    };
 
-  const coloresOscuros = {
-    negro: "#09090b",
-    rojo: "#24070d",
-    verde: "#0a1c17",
-    azul: "#0a1728"
-  };
+    const coloresOscuros = {
+      negro: "#09090b",
+      rojo: "#24070d",
+      verde: "#0a1c17",
+      azul: "#0a1728"
+    };
 
-  if (ficha === "X") {
-    jugadorX = nombre1;
-    jugadorO = nombre2;
-    colorX = colores[color1];
-    colorO = color1 === color2 ? coloresOscuros[color2] : colores[color2];
-  } else {
-    jugadorX = nombre2;
-    jugadorO = nombre1;
-    colorO = colores[color1];
-    colorX = color1 === color2 ? coloresOscuros[color2] : colores[color2];
+    if (ficha === "X") {
+      jugadorX = nombre1;
+      jugadorO = nombre2;
+      colorX = colores[color1];
+      colorO = color1 === color2 ? coloresOscuros[color2] : colores[color2];
+    } else {
+      jugadorX = nombre2;
+      jugadorO = nombre1;
+      colorO = colores[color1];
+      colorX = color1 === color2 ? coloresOscuros[color1] : colores[color2];
+    }
+
+    document.getElementById("nombreX").textContent = "☠️ " + jugadorX;
+    document.getElementById("nombreO").textContent = "💀 " + jugadorO;
+
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("juego").style.display = "block";
+
+    actualizarColorFondo(turno);
+    crearTablero();
+    actualizarMensaje();
+  } catch (error) {
+    console.error("Error iniciando el juego:", error);
+    alert("Error al iniciar el juego. Revisa la consola para más detalles.");
   }
-
-  document.getElementById("nombreX").textContent = "☠️ " + jugadorX;
-  document.getElementById("nombreO").textContent = "💀 " + jugadorO;
-
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("juego").style.display = "block";
-
-  actualizarColorFondo(turno);
-  crearTablero();
-  actualizarMensaje();
 }
 
 function crearTablero() {
