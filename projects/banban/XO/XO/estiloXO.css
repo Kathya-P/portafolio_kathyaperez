@@ -1,0 +1,98 @@
+body {
+  font-family: 'Creepster', cursive;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 22px;
+  transition: background-color 0.5s;
+}
+
+h1 {
+  font-size: 60px;
+  color: red;
+  text-shadow: 2px 2px black;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 18px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 18px;
+  margin: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #550000;
+  color: white;
+  font-family: 'Creepster', cursive;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.celda {
+  width: 120px;
+  height: 120px;
+  background-color: #222;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 60px;
+  transition: transform 0.2s;
+}
+
+.celda:hover {
+  transform: scale(1.1);
+  background-color: #333;
+}
+
+.pantalla-juego {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lado {
+  min-width: 150px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.centro {
+  text-align: center;
+}
+
+.botones {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+#mensaje {
+  font-size: 28px;
+  margin-top: 20px;
+  text-shadow: 1px 1px red;
+}

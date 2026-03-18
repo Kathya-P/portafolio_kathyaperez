@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>☠️XO💀</title>
+  <link rel="stylesheet" href="estiloXO.css">
+  <!-- Fuente espeluznante de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pantalla inicial para configurar jugadores -->
+  <div id="inicio">
+    <h1>❌ Destino Final ⭕</h1>
+
+    <p>Nombre del Primer Destinado: </p>
+    <input type="text" id="jugador1" placeholder="Tus últimos tecleos...">
+
+    <p>¿Querés ser ☠️ o 💀?</p>
+    <select id="fichaJugador1">
+      <option value="X">☠️</option>
+      <option value="O">💀</option>
+    </select>
+
+    <p>Color Mortal:</p>
+    <select id="colorJugador1">
+      <option value="negro">Negro</option>
+      <option value="rojo">Rojo</option>
+      <option value="verde">Verde</option>
+      <option value="azul">Azul</option>
+    </select>
+
+    <p>Nombre del Segundo Destinado: </p>
+    <input type="text" id="jugador2" placeholder="Tus últimos tecleos...">
+
+    <p>Color Mortal:</p>
+    <select id="colorJugador2">
+      <option value="rojo">Rojo</option>
+      <option value="negro">Negro</option>
+      <option value="verde">Verde</option>
+      <option value="azul">Azul</option>
+    </select>
+
+    <br><br>
+    <button onclick="empezarJuego()">Desafiar al Destino</button>
+  </div>
+
+  <!-- Pantalla principal del juego -->
+  <div id="juego" style="display:none;">
+    <h1>Cruce de Destinos</h1>
+
+    <div class="pantalla-juego">
+      <!-- Lado del jugador X -->
+      <div class="lado">
+        <p><span id="nombreX">☠️</span></p>
+        <p>Victorias: <span id="puntosX">0</span></p>
+      </div>
+
+      <!-- tablero, mensaje y botones -->
+      <div class="centro">
+        <div class="tablero" id="tablero"></div>
+        <p id="mensaje">Turno de: ☠️</p>
+        <div class="botones">
+          <button onclick="reiniciarJuego()">Una Última Jugada</button>
+          <button onclick="rendirse()">Detener el Destino</button>
+        </div>
+      </div>
+
+      <!-- Lado del jugador O -->
+      <div class="lado">
+        <p><span id="nombreO">💀 O</span></p>
+        <p>Victorias: <span id="puntosO">0</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Archivo JS con la lógica del juego -->
+  <script src="XO.js"></script>
+</body>
+</html>
