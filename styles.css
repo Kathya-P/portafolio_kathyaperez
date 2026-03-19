@@ -254,6 +254,12 @@ body {
 }
 
 .lang-toggle {
+  width: 52px;
+  min-width: 52px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: var(--accent);
   border: 1.5px solid var(--accent);
@@ -261,7 +267,7 @@ body {
   font-family: 'Fira Code', monospace;
   font-size: 0.78rem;
   font-weight: 700;
-  padding: 5px 12px;
+  padding: 5px 0;
   cursor: pointer;
   letter-spacing: 1px;
   text-shadow: 0 0 8px var(--accent);
