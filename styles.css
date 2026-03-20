@@ -667,7 +667,8 @@ body {
   content: attr(data-level);
   position: absolute;
   left: 50%;
-  top: calc(100% + 8px);
+  top: auto;
+  bottom: calc(100% + 8px);
   transform: translateX(-50%) translateY(4px);
   background: #00d9ff;
   color: #03131d;
@@ -691,6 +692,7 @@ body {
 .skills-grid .tag[data-level] {
   overflow: visible;
   color: #c5d9ee;
+  z-index: 1;
 }
 
 .skills-grid .tag[data-level]::before {
@@ -703,6 +705,7 @@ body {
   background: rgba(0, 217, 255, 0.16);
   border-color: #37e8ff;
   box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.15), 0 0 16px rgba(0, 217, 255, 0.18);
+  z-index: 6;
 }
 
 .skills-grid .tag[data-level]:hover::after,
