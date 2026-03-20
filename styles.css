@@ -685,6 +685,10 @@ body {
   z-index: 2;
 }
 
+.skills-grid .tag[data-level] {
+  overflow: visible;
+}
+
 .skills-grid .tag[data-level]:hover::after,
 .skills-grid .tag[data-level]:focus-visible::after {
   opacity: 1;
