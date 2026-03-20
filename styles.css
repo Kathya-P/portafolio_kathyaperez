@@ -667,26 +667,42 @@ body {
   content: attr(data-level);
   position: absolute;
   left: 50%;
-  bottom: calc(100% + 8px);
+  top: calc(100% + 8px);
   transform: translateX(-50%) translateY(4px);
-  background: rgba(5, 10, 15, 0.95);
-  color: var(--accent);
-  border: 1px solid var(--accent);
+  background: #00d9ff;
+  color: #03131d;
+  border: 1px solid #7ff0ff;
   border-radius: 4px;
-  padding: 2px 8px;
-  font-size: 0.68rem;
+  padding: 3px 9px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   line-height: 1.2;
   font-family: 'Fira Code', monospace;
-  text-shadow: 0 0 8px rgba(0,217,255,0.35);
-  box-shadow: 0 0 18px rgba(0,217,255,0.22);
+  text-shadow: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.18s ease, transform 0.18s ease;
-  z-index: 2;
+  z-index: 4;
 }
 
 .skills-grid .tag[data-level] {
   overflow: visible;
+  color: #c5d9ee;
+}
+
+.skills-grid .tag[data-level]::before {
+  display: none;
+}
+
+.skills-grid .tag[data-level]:hover,
+.skills-grid .tag[data-level]:focus-visible {
+  color: #ebf8ff;
+  background: rgba(0, 217, 255, 0.16);
+  border-color: #37e8ff;
+  box-shadow: 0 0 0 1px rgba(0, 217, 255, 0.15), 0 0 16px rgba(0, 217, 255, 0.18);
 }
 
 .skills-grid .tag[data-level]:hover::after,
