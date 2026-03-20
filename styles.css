@@ -719,8 +719,19 @@ body {
 .meter-name { color: var(--text); }
 
 .meter-value {
+  min-width: 3.2ch;
+  text-align: right;
   color: var(--accent);
   text-shadow: 0 0 10px rgba(0,217,255,0.35);
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.meter-item:hover .meter-value,
+.meter-item:focus-within .meter-value {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .meter-track {
@@ -744,6 +755,13 @@ body {
 
 .skills-meter.visible .meter-fill {
   width: var(--level);
+}
+
+@media (hover: none) {
+  .meter-value {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .projects-grid {
