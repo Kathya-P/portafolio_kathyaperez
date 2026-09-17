@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,6 +19,7 @@
     <div class="nav-container">
       <a href="#inicio" class="nav-logo">KP<span>.</span></a>
       <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar a modo claro" title="Cambiar tema">☼</button>
         <button class="lang-toggle" id="langToggle" title="Switch language">EN</button>
         <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
           <span></span><span></span><span></span>
@@ -28,7 +29,6 @@
         <li><a href="#sobre-mi"     data-i18n="nav-about">Sobre mí</a></li>
         <li><a href="#habilidades"  data-i18n="nav-skills">Habilidades</a></li>
         <li><a href="#proyectos"    data-i18n="nav-projects">Proyectos</a></li>
-        <li><a href="#trayectoria"  data-i18n="nav-timeline">Trayectoria</a></li>
         <li><a href="#certificados" data-i18n="nav-certs">Certificados</a></li>
         <li><a href="#contacto" class="nav-cta" data-i18n="nav-contact">Contacto</a></li>
       </ul>
@@ -43,7 +43,7 @@
 
         <!-- TEXT -->
         <div class="hero-content">
-          <p class="hero-greeting" data-i18n="greeting">// hola, soy</p>
+          <p class="hero-greeting" data-i18n="greeting"><span class="emoji-mark" aria-hidden="true">✦</span> // hola, soy</p>
           <h1 class="hero-name" data-text="Kathya Pérez">Kathya Pérez</h1>
           <h2 class="hero-role">Full Stack Developer<span class="cursor">|</span></h2>
           <p class="hero-description" data-i18n="hero-desc">
@@ -53,7 +53,7 @@
           <div class="hero-highlights reveal" data-dir="left">
             <span class="hero-pill" data-i18n="hero-pill-role">Objetivo: Full Stack Developer Junior</span>
             <span class="hero-pill" data-i18n="hero-pill-stack">Stack: Java · C# · JavaScript · Vue/React</span>
-            <span class="hero-pill" data-i18n="hero-pill-availability">Disponibilidad: Prácticas / remoto</span>
+            <span class="hero-pill" data-i18n="hero-pill-availability"><span class="emoji-mark" aria-hidden="true">✿</span> Disponibilidad: Prácticas / remoto</span>
           </div>
 
           <div class="hero-actions">
@@ -84,6 +84,11 @@
             <span class="photo-bracket photo-bracket--left">&lt;</span>
             <span class="photo-bracket photo-bracket--right">&gt;</span>
             <img src="foto.png" alt="Kathya Pérez" class="hero-photo" />
+            <span class="photo-label photo-label--top" aria-hidden="true">JAVA / API</span>
+            <span class="photo-label photo-label--bottom" aria-hidden="true">UI / CODE</span>
+            <span class="photo-status" aria-hidden="true"><i></i> disponible</span>
+            <span class="photo-cross photo-cross--one" aria-hidden="true"></span>
+            <span class="photo-dots photo-dots--one" aria-hidden="true"></span>
           </div>
         </div>
 
@@ -102,24 +107,24 @@
       <h2 class="section-title" data-i18n="about-title">Sobre mí</h2>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p data-i18n="about-p1">Tengo 20 años y soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en la Universidad Católica de El Salvador. Me interesa construir soluciones completas: APIs limpias, sistemas seguros y experiencias web atractivas con enfoque en calidad y escalabilidad.</p>
-          <p data-i18n="about-p2">Tengo experiencia práctica con <strong>Java (Spring Boot), C# (.NET) y PHP</strong> en backend, y con <strong>HTML, CSS, JavaScript, Vue.js, React y Bootstrap</strong> en frontend. Esto me permite comprender proyectos completos de extremo a extremo.</p>
-          <p data-i18n="about-p3">Siempre estoy aprendiendo algo nuevo. Actualmente profundizando en arquitectura de software, seguridad web y buenas prácticas de desarrollo.</p>
+          <p data-i18n="about-p1">Soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en UNICAES. Me gusta crear APIs, sistemas de gestión y experiencias web funcionales.</p>
+          <p data-i18n="about-p2">Trabajo con <strong>Java, Spring Boot, C#/.NET y PHP</strong> en backend, además de JavaScript, Vue, React y Bootstrap en frontend.</p>
+          <p data-i18n="about-p3">Actualmente profundizo en arquitectura, seguridad web y buenas prácticas de desarrollo.</p>
           <div class="about-info">
             <div class="about-info-item">
-              <span class="label" data-i18n="label-location">📍 Ubicación</span>
+              <span class="label label-location" data-i18n="label-location">Ubicación</span>
               <span data-i18n="val-location">El Salvador</span>
             </div>
             <div class="about-info-item">
-              <span class="label" data-i18n="label-uni">🎓 Universidad</span>
+              <span class="label label-uni" data-i18n="label-uni">Universidad</span>
               <span data-i18n="val-uni">UNICAES · Ing. en Desarrollo de Software (2024 – presente)</span>
             </div>
             <div class="about-info-item">
-              <span class="label" data-i18n="label-langs">🌐 Idiomas</span>
+              <span class="label label-langs" data-i18n="label-langs">Idiomas</span>
               <span data-i18n="val-langs">Español (nativo) · Inglés B1</span>
             </div>
             <div class="about-info-item">
-              <span class="label" data-i18n="label-avail">💼 Disponibilidad</span>
+              <span class="label label-avail" data-i18n="label-avail">Disponibilidad</span>
               <span data-i18n="val-avail">Prácticas profesionales / trabajo remoto</span>
             </div>
           </div>
@@ -136,34 +141,34 @@
         <div class="skill-category reveal">
           <h3 data-i18n="skill-cat-langs">Lenguajes</h3>
           <div class="skill-tags">
-            <span class="tag" data-level="78%">C#</span><span class="tag" data-level="72%">PHP</span><span class="tag" data-level="76%">JavaScript</span>
-            <span class="tag" data-level="80%">HTML5</span><span class="tag" data-level="78%">CSS3</span><span class="tag" data-level="74%">SQL</span>
-            <span class="tag" data-level="58%">Python</span>
+            <span class="tag">C#</span><span class="tag">PHP</span><span class="tag">JavaScript</span>
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">SQL</span>
+            <span class="tag">Python</span>
           </div>
         </div>
         <div class="skill-category reveal">
           <h3 data-i18n="skill-cat-fw">Frameworks &amp; Librerías</h3>
           <div class="skill-tags">
-            <span class="tag" data-level="82%">Spring Boot</span><span class="tag" data-level="68%">Vue.js</span>
-            <span class="tag" data-level="70%">React</span><span class="tag" data-level="75%">Bootstrap 5</span>
-            <span class="tag" data-level="78%">.NET</span>
+            <span class="tag">Spring Boot</span><span class="tag">Vue.js</span>
+            <span class="tag">React</span><span class="tag">Bootstrap 5</span>
+            <span class="tag">.NET</span>
           </div>
         </div>
         <div class="skill-category reveal">
           <h3 data-i18n="skill-cat-db">Bases de Datos</h3>
           <div class="skill-tags">
-            <span class="tag" data-level="76%">MySQL</span><span class="tag" data-level="74%">SQL Server</span>
-            <span class="tag" data-level="60%">Oracle</span><span class="tag" data-level="66%">MariaDB</span>
-            <span class="tag" data-level="70%">PostgreSQL</span>
+            <span class="tag">MySQL</span><span class="tag">SQL Server</span>
+            <span class="tag">Oracle</span><span class="tag">MariaDB</span>
+            <span class="tag">PostgreSQL</span>
           </div>
         </div>
         <div class="skill-category reveal">
           <h3 data-i18n="skill-cat-tools">Herramientas &amp; Otros</h3>
           <div class="skill-tags">
-            <span class="tag" data-level="80%">Git</span><span class="tag" data-level="88%">VS Code</span>
-            <span class="tag" data-level="80%">Visual Studio</span><span class="tag" data-level="68%">Linux / Bash</span>
-            <span class="tag" data-level="64%">Apache</span><span class="tag" data-level="62%">Nginx</span>
-            <span class="tag" data-level="84%">REST APIs</span><span class="tag" data-level="78%">MVC</span>
+            <span class="tag">Git</span><span class="tag">VS Code</span>
+            <span class="tag">Visual Studio</span><span class="tag">Linux / Bash</span>
+            <span class="tag">Apache</span><span class="tag">Nginx</span>
+            <span class="tag">REST APIs</span><span class="tag">MVC</span>
           </div>
         </div>
       </div>
@@ -374,54 +379,29 @@
           </div>
         </article>
 
+        <article class="project-card reveal" data-tech="java backend fullstack">
+          <div class="project-header">
+            <div>
+              <p class="project-kicker">Java 21 · Spring Boot · PostgreSQL</p>
+              <h3 data-i18n="proj-oportunidades-title">Oportunidades — Gestión Académica</h3>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Kathya-P/Oportunidades" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.332-1.756-1.332-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://oportunidadesfgk.onrender.com" target="_blank" rel="noopener" aria-label="Demo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M14 3a1 1 0 0 1 1-1h6a1 1 0 1 1 1 1v6a1 1 0 1 1-2 0V5.414l-9.293 9.293a1 1 0 0 1-1.414-1.414L18.586 4H15a1 1 0 0 1-1-1zM3 7a2 2 0 0 1 2-2h5a1 1 0 1 1 0 2H5v12h12v-5a1 1 0 1 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg>
+              </a>
+            </div>
+          </div>
+          <p data-i18n="proj-oportunidades-desc">Plataforma web para gestionar estudiantes, docentes, grupos y períodos escolares. Registra asistencias con códigos de barras, genera reportes y detecta riesgos de ausentismo mediante dashboards y estadísticas.</p>
+          <div class="project-tags">
+            <span>Java 21</span><span>Spring Boot</span><span>Thymeleaf</span><span>Spring Security</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span>
+          </div>
+        </article>
+
       </div>
       <p class="projects-empty" id="projectsEmpty" data-i18n="projects-empty">No hay proyectos para ese filtro por ahora.</p>
-    </div>
-  </section>
-
-  <!-- ===== TRAYECTORIA ===== -->
-  <section class="section section-alt" id="trayectoria">
-    <div class="container">
-      <h2 class="section-title" data-i18n="timeline-title">Trayectoria</h2>
-      <p class="section-subtitle" data-i18n="timeline-subtitle">Evolución de aprendizaje, proyectos y crecimiento técnico.</p>
-
-      <div class="timeline-roadmap">
-        <article class="timeline-step reveal" data-dir="left">
-          <div class="timeline-step-head">
-            <span class="timeline-step-year">2024</span>
-            <span class="timeline-step-dot" aria-hidden="true"></span>
-          </div>
-          <h3 data-i18n="timeline-1-title">Inicio de Ingeniería en Software</h3>
-          <p data-i18n="timeline-1-desc">Comienzo formal en UNICAES, consolidando fundamentos de programación, arquitectura y bases de datos.</p>
-        </article>
-
-        <article class="timeline-step reveal" data-dir="right">
-          <div class="timeline-step-head">
-            <span class="timeline-step-year">2024</span>
-            <span class="timeline-step-dot" aria-hidden="true"></span>
-          </div>
-          <h3 data-i18n="timeline-2-title">Primeras certificaciones técnicas</h3>
-          <p data-i18n="timeline-2-desc">Back-End, Front-End y soporte IT; fortaleciendo el perfil para proyectos reales y trabajo en equipo.</p>
-        </article>
-
-        <article class="timeline-step reveal" data-dir="left">
-          <div class="timeline-step-head">
-            <span class="timeline-step-year">2025</span>
-            <span class="timeline-step-dot" aria-hidden="true"></span>
-          </div>
-          <h3 data-i18n="timeline-3-title">Sistema de Reclutamiento en C#</h3>
-          <p data-i18n="timeline-3-desc">Desarrollo de solución de escritorio con WinForms y SQL Server para evaluación y comparación de candidatos.</p>
-        </article>
-
-        <article class="timeline-step reveal" data-dir="right">
-          <div class="timeline-step-head">
-            <span class="timeline-step-year">2026</span>
-            <span class="timeline-step-dot" aria-hidden="true"></span>
-          </div>
-          <h3 data-i18n="timeline-4-title">EventSphere y portafolio técnico</h3>
-          <p data-i18n="timeline-4-desc">Implementación de plataforma full stack con Spring Boot, despliegue en Railway y mejora continua del portafolio.</p>
-        </article>
-      </div>
     </div>
   </section>
 
@@ -643,7 +623,7 @@
       <p class="section-subtitle" data-i18n="contact-subtitle">¿Tienes una oportunidad o proyecto en mente? Hablemos.</p>
       <div class="contact-grid">
         <a href="mailto:kathyaperez015@gmail.com" class="contact-card reveal">
-          <span class="contact-icon">✉️</span>
+          <span class="contact-icon" aria-hidden="true">✉</span>
           <div>
             <h3>Email</h3>
             <p>kathyaperez015@gmail.com</p>

@@ -4,11 +4,10 @@ const translations = {
     'nav-about':    'Sobre mí',
     'nav-skills':   'Habilidades',
     'nav-projects': 'Proyectos',
-    'nav-timeline': 'Trayectoria',
     'nav-certs':    'Certificados',
     'nav-contact':  'Contacto',
     'greeting':     '// hola, soy',
-    'hero-desc':    'Desarrolladora junior full stack (20 años) con especialidad en backend usando Java/Spring Boot y C#/.NET. Construyo APIs seguras, sistemas de gestión escalables y soluciones web completas con enfoque en calidad y resultados.',
+    'hero-desc':    'Desarrolladora junior full stack enfocada en backend con Java/Spring Boot y C#/.NET. Creo APIs seguras y soluciones web completas.',
     'hero-pill-role': 'Objetivo: Full Stack Developer Junior',
     'hero-pill-stack': 'Stack: Java · C# · JavaScript · Vue/React',
     'hero-pill-availability': 'Disponibilidad: Prácticas / remoto',
@@ -16,13 +15,13 @@ const translations = {
     'hero-btn2':    'Ver proyectos clave',
     'hero-btn-cv':  'Descargar CV',
     'about-title':  'Sobre mí',
-    'about-p1':     'Tengo 20 años y soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en la Universidad Católica de El Salvador. Me interesa construir soluciones completas: APIs limpias, sistemas seguros y experiencias web atractivas con enfoque en calidad y escalabilidad.',
-    'about-p2':     'Tengo experiencia práctica con <strong>Java (Spring Boot), C# (.NET) y PHP</strong> en backend, y con <strong>HTML, CSS, JavaScript, Vue.js, React y Bootstrap</strong> en frontend. Esto me permite comprender proyectos completos de extremo a extremo.',
-    'about-p3':     'Siempre estoy aprendiendo algo nuevo. Actualmente profundizando en arquitectura de software, seguridad web y buenas prácticas de desarrollo.',
-    'label-location': '📍 Ubicación',
-    'label-uni':      '🎓 Universidad',
-    'label-langs':    '🌐 Idiomas',
-    'label-avail':    '💼 Disponibilidad',
+    'about-p1':     'Soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en UNICAES. Me gusta crear APIs, sistemas de gestión y experiencias web funcionales.',
+    'about-p2':     'Trabajo con <strong>Java, Spring Boot, C#/.NET y PHP</strong> en backend, además de JavaScript, Vue, React y Bootstrap en frontend.',
+    'about-p3':     'Actualmente profundizo en arquitectura, seguridad web y buenas prácticas de desarrollo.',
+    'label-location': 'Ubicación',
+    'label-uni':      'Universidad',
+    'label-langs':    'Idiomas',
+    'label-avail':    'Disponibilidad',
     'val-location': 'El Salvador',
     'val-uni':      'UNICAES · Ing. en Desarrollo de Software (2024 – presente)',
     'val-langs':    'Español (nativo) · Inglés B1',
@@ -54,16 +53,8 @@ const translations = {
     'proj-seguros-desc':  'Plataforma integral de gestión de seguros con cotizaciones automáticas, gestión de pólizas, procesamiento de reclamos y detección de fraudes. Dashboard ejecutivo con KPIs en tiempo real. Frontend completo sin backend requerido.',
     'proj-eventsphere-title': 'EventSphere — Plataforma de Eventos',
     'proj-eventsphere-desc':  'Plataforma web full-stack para gestión de eventos con compra de boletos, generación de códigos QR, chat por evento, sistema de reseñas y panel de administración. Desplegada en Railway con PostgreSQL.',
-    'timeline-title': 'Trayectoria',
-    'timeline-subtitle': 'Evolución de aprendizaje, proyectos y crecimiento técnico.',
-    'timeline-1-title': 'Inicio de Ingeniería en Software',
-    'timeline-1-desc': 'Comienzo formal en UNICAES, consolidando fundamentos de programación, arquitectura y bases de datos.',
-    'timeline-2-title': 'Primeras certificaciones técnicas',
-    'timeline-2-desc': 'Back-End, Front-End y soporte IT; fortaleciendo el perfil para proyectos reales y trabajo en equipo.',
-    'timeline-3-title': 'Sistema de Reclutamiento en C#',
-    'timeline-3-desc': 'Desarrollo de solución de escritorio con WinForms y SQL Server para evaluación y comparación de candidatos.',
-    'timeline-4-title': 'EventSphere y portafolio técnico',
-    'timeline-4-desc': 'Implementación de plataforma full stack con Spring Boot, despliegue en Railway y mejora continua del portafolio.',
+    'proj-oportunidades-title': 'Oportunidades — Gestión Académica',
+    'proj-oportunidades-desc':  'Plataforma web para gestionar estudiantes, docentes, grupos y períodos escolares. Registra asistencias con códigos de barras, genera reportes y detecta riesgos de ausentismo mediante dashboards y estadísticas.',
     'soft-title':         'Habilidades Blandas',
     'soft-certs-label':  '// certificados relacionados',
     'soft-communication': 'Comunicación efectiva',
@@ -85,11 +76,10 @@ const translations = {
     'nav-about':    'About',
     'nav-skills':   'Skills',
     'nav-projects': 'Projects',
-    'nav-timeline': 'Timeline',
     'nav-certs':    'Certificates',
     'nav-contact':  'Contact',
     'greeting':     '// hi, I\'m',
-    'hero-desc':    'Junior full-stack developer (20 years old) with a specialty in backend using Java/Spring Boot and C#/.NET. I build secure APIs, scalable management systems, and complete web solutions with a focus on quality and results.',
+    'hero-desc':    'Junior full-stack developer focused on backend with Java/Spring Boot and C#/.NET. I build secure APIs and complete web solutions.',
     'hero-pill-role': 'Target role: Junior Full Stack Developer',
     'hero-pill-stack': 'Stack: Java · C# · JavaScript · Vue/React',
     'hero-pill-availability': 'Availability: Internship / remote',
@@ -97,13 +87,13 @@ const translations = {
     'hero-btn2':    'View key projects',
     'hero-btn-cv':  'Download CV',
     'about-title':  'About me',
-    'about-p1':     'I\'m 20 years old and a <strong>Software Development Engineering</strong> student at Universidad Católica de El Salvador. I\'m passionate about building complete solutions: clean APIs, secure systems, and attractive web experiences with a focus on quality and scalability.',
-    'about-p2':     'I have hands-on experience with <strong>Java (Spring Boot), C# (.NET) and PHP</strong> for backend, and with <strong>HTML, CSS, JavaScript, Vue.js, React and Bootstrap</strong> on the frontend. This allows me to understand complete projects end to end.',
-    'about-p3':     'I\'m always learning something new. Currently deepening my knowledge in software architecture, web security and development best practices.',
-    'label-location': '📍 Location',
-    'label-uni':      '🎓 University',
-    'label-langs':    '🌐 Languages',
-    'label-avail':    '💼 Availability',
+    'about-p1':     'I\'m a <strong>Software Development Engineering</strong> student at UNICAES. I enjoy building APIs, management systems and functional web experiences.',
+    'about-p2':     'I work with <strong>Java, Spring Boot, C#/.NET and PHP</strong> on the backend, plus JavaScript, Vue, React and Bootstrap on the frontend.',
+    'about-p3':     'I\'m currently deepening my knowledge of architecture, web security and development best practices.',
+    'label-location': 'Location',
+    'label-uni':      'University',
+    'label-langs':    'Languages',
+    'label-avail':    'Availability',
     'val-location': 'El Salvador',
     'val-uni':      'UNICAES · Software Development Engineering (2024 – present)',
     'val-langs':    'Spanish (native) · English B1',
@@ -135,16 +125,8 @@ const translations = {
     'proj-seguros-desc':  'Comprehensive insurance management platform with automatic quotes, policy management, claims processing and fraud detection. Executive dashboard with real-time KPIs. Complete frontend without backend required.',
     'proj-eventsphere-title': 'EventSphere — Events Platform',
     'proj-eventsphere-desc':  'Full-stack web platform for event management with ticket purchasing, QR code generation, in-event chat, review system and admin panel. Deployed on Railway with PostgreSQL.',
-    'timeline-title': 'Timeline',
-    'timeline-subtitle': 'Learning journey, projects and technical growth over time.',
-    'timeline-1-title': 'Started Software Engineering degree',
-    'timeline-1-desc': 'Formal start at UNICAES, strengthening fundamentals in programming, architecture and databases.',
-    'timeline-2-title': 'First technical certifications',
-    'timeline-2-desc': 'Back-End, Front-End and IT support certifications, building a stronger profile for real projects and teamwork.',
-    'timeline-3-title': 'C# Recruitment System',
-    'timeline-3-desc': 'Built a desktop solution with WinForms and SQL Server for candidate evaluation and comparison.',
-    'timeline-4-title': 'EventSphere and technical portfolio',
-    'timeline-4-desc': 'Delivered a full-stack platform with Spring Boot, Railway deployment, and continuous portfolio improvement.',
+    'proj-oportunidades-title': 'Oportunidades — Academic Management',
+    'proj-oportunidades-desc':  'Web platform for managing students, teachers, groups and school periods. Records attendance with barcodes, generates reports and detects absenteeism risks through dashboards and statistics.',
     'soft-title':         'Soft Skills',
     'soft-certs-label':  '// related certificates',
     'soft-communication': 'Effective communication',
@@ -206,6 +188,25 @@ langToggle.addEventListener('click', () => {
   setLang(currentLang);
 });
 
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('themeToggle');
+let currentTheme = localStorage.getItem('theme') || 'dark';
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem('theme', theme);
+  themeToggle.textContent = theme === 'dark' ? '☼' : '☾';
+  themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+  themeToggle.setAttribute('title', theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+}
+
+setTheme(currentTheme);
+
+themeToggle.addEventListener('click', () => {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  setTheme(currentTheme);
+});
+
 // ===== SCROLL REVEAL =====
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -223,15 +224,6 @@ const titleObserver = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('line-on'); });
 }, { threshold: 0.5 });
 document.querySelectorAll('.section-title').forEach(el => titleObserver.observe(el));
-
-// ===== MOUSE SPOTLIGHT =====
-const spotlight = document.createElement('div');
-spotlight.className = 'spotlight';
-document.body.prepend(spotlight);
-document.addEventListener('mousemove', e => {
-  spotlight.style.setProperty('--mx', e.clientX + 'px');
-  spotlight.style.setProperty('--my', e.clientY + 'px');
-});
 
 // ===== TYPING ANIMATION =====
 const roles = ['Full Stack Developer', 'Java / Spring Boot', 'C# / React Developer', 'API Builder', 'Full-Stack Developer'];
@@ -259,19 +251,6 @@ function typeRole() {
   setTimeout(typeRole, deleting ? 45 : 85);
 }
 typeRole();
-
-// ===== 3D CARD TILT =====
-document.querySelectorAll('.project-card, .cert-card').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width  - 0.5;
-    const y = (e.clientY - rect.top)  / rect.height - 0.5;
-    card.style.transform = `perspective(700px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-5px) scale(1.01)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-  });
-});
 
 // ===== SCROLL SPY — active nav link =====
 const sections    = document.querySelectorAll('section[id]');
